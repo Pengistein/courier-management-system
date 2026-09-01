@@ -53,6 +53,7 @@
                             L.latLng(nearestBranch.latitude, nearestBranch.longitude),
                             L.latLng(latitude, longitude)
                         ],
+                        addWaypoints: false,
                         show: false,
                         lineOptions: {
                             styles: [{
