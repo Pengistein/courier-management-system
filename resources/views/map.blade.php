@@ -50,7 +50,7 @@
                     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
                     L.Routing.control({
                         waypoints: [
-                            L.latLng(24.840131, 67.142911),
+                            L.latLng(nearestBranch.latitude, nearestBranch.longitude),
                             L.latLng(latitude, longitude)
                         ],
                         show: false,
