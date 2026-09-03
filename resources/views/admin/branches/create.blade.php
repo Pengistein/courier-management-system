@@ -20,9 +20,16 @@
                             <label for="name" class="mb-1 form-label fw-bold">Branch Name</label>
                             <input class="form-control" placeholder="Branch Name" name="name" />
                         </div>
-                        <div class="text-start mt-2">
-                            <label for="address" class="mb-1 form-label fw-bold">Branch Address</label>
-                            <input class="form-control" placeholder="Branch Address" name="address" />
+                        <div class="row">
+
+                            <div class="text-start mt-2">
+                                <label for="address" class="mb-1 form-label fw-bold">Branch Address</label>
+                                <input class="form-control" placeholder="Branch Address" name="address" />
+                            </div>
+                            <div class="text-start mt-2">
+                                <label for="city" class="mb-1 form-label fw-bold">Branch City</label>
+                                <input class="form-control" placeholder="Branch City" name="city" />
+                            </div>
                         </div>
                         <div class="text-start mt-2">
                             <label for="manager_id" class="form-label mb-1 fw-bold">Choose a Manager</label>

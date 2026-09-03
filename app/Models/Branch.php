@@ -10,6 +10,7 @@ class Branch extends Model
         'name',
         'address',
         'manager_id',
+        'city',
         'latitude',
         'longitude',
         'timing',

@@ -2,6 +2,9 @@
 @section('title', 'Branches')
 @section('content')
 
+@php
+    $branchesCount = DB::table('branch')->count();
+@endphp
 
 <div class="page-title">
   Branches
@@ -16,7 +19,7 @@
               Total Branches
             </div>
             <div class="card-number">
-              0
+              {{ $branchesCount }}
             </div>
           </div>
           <div class="card-icon">
