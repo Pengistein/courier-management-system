@@ -4,6 +4,7 @@
 
 @php
     $branchesCount = DB::table('branch')->count();
+    $cityCount = DB::table('branch')->distinct('city')->count('city');
 @endphp
 
 <div class="page-title">
@@ -39,7 +40,7 @@
               Cities Covered
             </div>
             <div class="card-number">
-              0
+              {{ $cityCount }}
             </div>
           </div>
           <div class="card-icon">

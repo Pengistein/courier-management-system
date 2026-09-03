@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name', 255)->default('Branch');
             $table->string('address', 255)->default('Karachi, Pakistan');
             $table->foreignId('manager_id')->constrained('employees')->onDelete('cascade');
+            $table->string('city', 255)->default('Karachi');
             $table->decimal('latitude', 65, 30);
             $table->decimal('longitude', 65, 30);
             $table->string('timing', 255)->default('9:00 AM - 6:00 PM');
