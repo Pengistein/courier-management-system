@@ -1,17 +1,17 @@
 <?php
 
 
-use App\Http\Controllers\formcontroller;
+use App\Http\Controllers\BranchController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/admin/dashboard', function () {
-    return view('admin.dashboard');
 Route::get('/', function () {
     return view('map');
 });
 
-
+Route::get('/admin/dashboard', function () {
+    return view('admin.dashboard');
+});
 
 Route::get('/admin/couriers', function () {
     return view('admin.couriers.index');
@@ -66,3 +66,17 @@ Route::get('/admin/shipments/create', function () {
 Route::get('/admin/shipments/1', function () {
     return view('admin.shipments.show');
 });
+
+
+// Branches Routes
+Route::get('/admin/branches', function () {
+    return view('admin.branches.index');
+})->name('admin.branches.index');
+Route::get('/admin/branches/create', function () {
+    return view('admin.branches.create');
+})->name('admin.branches.create');
+Route::get('/admin/branches/branches', function () {
+    return view('admin.branches.branches');
+})->name('admin.branches.branches');
+
+Route::post('/admin/branches/store', [BranchController::class, 'create'])->name('admin.branches.store');

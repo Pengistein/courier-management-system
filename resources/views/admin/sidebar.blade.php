@@ -4,7 +4,7 @@
         <span>Courier Admin</span>
     </div>
     <div class="sidebar-menu">
-        <a href="#" class="active">
+        <a href="/admin/dashboard" class="active">
             <i class="bi bi-speedometer2"></i>
             <span>Dashboard</span>
         </a>
@@ -15,6 +15,10 @@
         <a href="#">
             <i class="bi bi-plus-circle"></i>
             <span>Add New Courier</span>
+        </a>
+        <a href="/admin/branches">
+            <i class="bi bi-building"></i>
+            <span>Branches</span>
         </a>
         <a href="#">
             <i class="bi bi-person-badge"></i>
