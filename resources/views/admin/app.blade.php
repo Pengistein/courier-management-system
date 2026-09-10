@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <style>
-        
-
         * {
             margin: 0;
             padding: 0;
@@ -220,8 +218,8 @@
 
 
         /* ========================================
-   ADMIN HEADER
-======================================== */
+            ADMIN HEADER
+        ======================================== */
 
         .admin-header {
             height: 70px;
@@ -547,11 +545,15 @@
 </head>
 
 <body>
+    @if (!Request::is('admin/login'));
 
     @include('admin.sidebar')
+    @endif
 
     <div class="main-wrapper">
+        @if (!Request::is('admin/login'));
         @include('admin.header')
+        @endif
         <main class="content">
             @yield('content')
         </main>

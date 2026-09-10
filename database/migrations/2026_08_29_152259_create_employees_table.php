@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('address', 255)->default('Karachi, Pakistan');
             $table->string('description', 255)->nullable();
             $table->string('resume', 255)->nullable();
+            $table->string('password', 255);
             $table->timestamps();
         });
     }

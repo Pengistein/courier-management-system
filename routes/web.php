@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\BranchController;
 use Illuminate\Support\Facades\Route;
 
@@ -9,9 +9,15 @@ Route::get('/', function () {
     return view('map');
 });
 
+Route::get('/admin/login', function (){
+    return view('admin.login');
+});
+
+Route::post('/admin/confirmation', [AdminLoginController::class, 'verifyAdmin'])->name('admin.confirmation');
+
 Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
-});
+})->name('admin.dashboard');
 
 Route::get('/admin/couriers', function () {
     return view('admin.couriers.index');
